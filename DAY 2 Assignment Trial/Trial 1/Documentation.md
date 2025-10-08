@@ -1,1 +1,0 @@
-Documentation of Day 2 Assignment.
