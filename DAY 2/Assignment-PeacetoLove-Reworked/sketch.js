@@ -14,11 +14,22 @@ function setup() {
   xPos2_2 = 1038;
   xPos2_3 = 962;
   createCanvas(1200, 400);
+  background(255);
 
 }
 
 function draw() {
-  background(255);
+  
+
+
+}
+
+function mouseMoved() {
+  PeaceToLove();
+
+}
+
+function PeaceToLove() {
 
 
   //Left
@@ -114,7 +125,7 @@ function draw() {
   ellipse(512, 250, 1000);
   ellipse(512, 150, 1000);
 
-  
+
 
   fill("#3AA0CD26")
   noStroke();
@@ -135,7 +146,7 @@ function draw() {
   ellipse(512, 250, sin(frameCount / 500) * 1000);
   ellipse(512, 150, sin(frameCount / 500) * 1000);
 
-  
+
 
   fill("#E91E6351")
   noStroke();

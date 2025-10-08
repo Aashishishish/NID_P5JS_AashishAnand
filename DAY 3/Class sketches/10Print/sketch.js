@@ -2,12 +2,12 @@ let x, y, size, choice;
 
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(innerWidth, innerHeight);
   background(220);
   x = 0;
   y = 0;
   choice = 0;
-  size = 20;
+  size = 50;
 }
 
 function draw() {
