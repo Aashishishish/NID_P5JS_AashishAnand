@@ -30,32 +30,32 @@ function draw() {
   
   fill('#72C2E430');
   noStroke();
-  ellipse (200, 100, frameCount%100);
-  ellipse (288, 150, frameCount%100);
-  ellipse (288, 250, frameCount%100);
-  ellipse (200, 300, frameCount%100);
-  ellipse (112, 250, frameCount%100);
-  ellipse (112, 150, frameCount%100);
+  ellipse (200, 100, 100);
+  ellipse (288, 150, 100);
+  ellipse (288, 250, 100);
+  ellipse (200, 300, 100);
+  ellipse (112, 250, 100);
+  ellipse (112, 150, 100);
   
   fill('rgba(255,192,203,0.46)');
   noStroke();
-  ellipse (200, 155, sin(frameCount/100)*100);
-  ellipse (238, 175, sin(frameCount/100)*100);
-  ellipse (238, 225, sin(frameCount/100)*100);
-  ellipse (200, 245, sin(frameCount/100)*100);
-  ellipse (162, 225, sin(frameCount/100)*100);
-  ellipse (162, 175, sin(frameCount/100)*100); //
+  ellipse (200, 155, 100);
+  ellipse (238, 175, 100);
+  ellipse (238, 225, 100);
+  ellipse (200, 245, 100);
+  ellipse (162, 225, 100);
+  ellipse (162, 175, 100); //
   
   
   //Right 
   
   fill("#97CBE142")
   noStroke();
-  ellipse (1000, 100, frameCount%150);
+  ellipse (1000, 100, sin(frameCount/100)*150);
   ellipse (1088, 150, frameCount%150);
-  ellipse (1088, 250, frameCount%150);
+  ellipse (1088, 250, sin(frameCount/100)*150);
   ellipse (1000, 300, frameCount%150);
-  ellipse (912, 250, frameCount%150);
+  ellipse (912, 250, sin(frameCount/100)*150);
   ellipse (912, 150, frameCount%150);
   
   
