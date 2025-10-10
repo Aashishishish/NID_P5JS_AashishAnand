@@ -4,7 +4,7 @@ let size = 100,genImages= [], noImages = 4;
 
 function preload() {
  for(let i=0; i<noImages; i=i+1){
-    let name = "images/g"+i+".jpeg";
+    let name = "images/i"+i+".jpg";
     genImages[i] = loadImage(name);
  }
 }
