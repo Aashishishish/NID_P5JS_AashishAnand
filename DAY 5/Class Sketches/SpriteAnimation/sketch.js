@@ -7,7 +7,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(innerWidth, innerHeight);
+  createCanvas(140, 128);
 
   let sWidth = spriteImg.width / sCols;
   let sHeight = spriteImg.height / sRows;
@@ -31,7 +31,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(255,0,0);
   let spriteanim = frameCount % 12;
   image(sprites[spriteanim], 0, 0);
   //calling the whole spritesheet
