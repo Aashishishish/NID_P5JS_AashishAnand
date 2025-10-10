@@ -1,12 +1,12 @@
 
-let size = 100;
-let i0, i1, i2, i3;
+let size = 100,genImages= [], noImages = 4;
+
 
 function preload() {
-  i0 = loadImage("images/i0.jpg");
-  i1 = loadImage("images/i1.jpg");
-  i2 = loadImage("images/i2.jpg");
-  i3 = loadImage("images/i3.jpg");
+ for(let i=0; i<noImages; i=i+1){
+    let name = "images/g"+i+".jpeg";
+    genImages[i] = loadImage(name);
+ }
 }
 
 function setup() {
@@ -18,32 +18,12 @@ function setup() {
 function draw() {
   background(220);
 
-  for (let i = 0; i < width; i = i + size) {
-    for (let j = 0; j < height; j = j + size) {
+  //nested for loop
+  for(let i=0; i<width;i=i+size){
+    for(let j=0; j<height; j=j+size) {
 
-      let choice = floor(random(0, 4));
-
-      if (choice == 0) {
-        image(i0, i, j);
-
-      }
-
-      else if (choice == 1) {
-        image(i1, i, j);
-      }
-
-      else if (choice == 2) {
-        image(i2, i, j);
-
-      }
-      else {
-        image(i3, i, j);
-
-      }
-
-
-
-    }
-
+      let choice = floor(random(0,noImages));
+      image(genImages[choice],i,j,size,size);
   }
+}
 }
