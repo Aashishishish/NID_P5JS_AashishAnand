@@ -47,14 +47,15 @@ function draw() {
   background(31, 81, 255);
   noStroke();
   image(bg, 0, 0, 1920, 1080);
+  image(scenes,0,0,1920,1080);
 
 
 
-  fill('red');
-  ellipse(1300, 150, 250, 250);
+  // fill('red');
+  // ellipse(1300, 150, 250, 250);
 
 
-  image(sprites[row][count], 750, 384);
+  image(sprites[row][count], 750, 800);
   if (frameCount % 5 == 0) {
     count = (count + 1) % spriteX;
     x = x + xdir;
