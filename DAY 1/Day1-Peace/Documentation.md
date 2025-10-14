@@ -10,7 +10,9 @@ Peace for me meant perfect harmony, synchronization, symmetry; a fleeting moment
 
 I wanted to capture that feeling.
 
-I used Circles to form a sacred geometry/flower of life inspired form. The colours-mild, soft and easy on the eyes.  
+I used Circles to form a sacred geometry/flower of life inspired form. The colours-mild, soft and easy on the eyes. 
+
+I used multiple such arrangments to form the final composition
 
 ![alt text](AashishAnand.png)
 
@@ -19,3 +21,6 @@ I used Circles to form a sacred geometry/flower of life inspired form. The colou
 
 The composition consists of ellipses in a polar arrangment like flowers. I brute forced the polar/radial arrangement of the ellipses. Functions or classes were not yet taught in class.
 
+### Learning and next steps
+
+Use functions and classes to make the code more efficient and easy to work with, so instead making every ellipse manually, they'll help me streamline the process.
