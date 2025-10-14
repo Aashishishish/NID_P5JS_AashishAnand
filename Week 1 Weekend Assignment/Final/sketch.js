@@ -34,7 +34,7 @@ function preload() {
 }
 
 function setup() {
-  colorMode(HSB);
+  // colorMode(HSB);
   createCanvas(innerWidth, innerHeight);
 
   //Setting the Background
@@ -91,7 +91,7 @@ function draw() {
   image(scenesnew, 0, 0);
 
   // BG 
-  let xSpeed = 0;
+
   if (keyIsPressed) {
     xPos += xSpeed;
   }
@@ -116,6 +116,8 @@ function draw() {
   //     o = o+odir;
   //   }
   // }
+
+}
 
   function keyPressed() {
 
@@ -178,12 +180,13 @@ function draw() {
       xSpeed = 0;
     }
   }
-}
+
 
 function keyReleased() {
   row = 0;
   xdir = 0;
   ydir = 0;
+  xSpeed = 0;
   // rowC = 0;
   count = frameCount % 12;
 
