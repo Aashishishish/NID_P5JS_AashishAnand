@@ -10,7 +10,16 @@ The Original Sprite sheet is of a Samurai, sourced from [craftpix.net](https://c
 
 The sprite sheet sourced from this website was a collection of single 1D sprite sheet. So i combined all of them in Photoshop into a single spritesheet to form a 2D Sprite Sheet.
 
-![alt text](Attack_1.png) ![alt text](Attack_2.png) ![alt text](Attack_3.png) ![alt text](Dead.png) ![alt text](Hurt.png) ![alt text](Idle.png) ![alt text](Jump.png) ![alt text](Run.png) ![alt text](Shield.png) ![alt text](Walk.png)
+![alt text](Attack_1.png) 
+![alt text](Attack_2.png) 
+![alt text](Attack_3.png) 
+![alt text](Dead.png)
+![alt text](Hurt.png)
+![alt text](Idle.png)
+![alt text](Jump.png) 
+![alt text](Run.png) 
+![alt text](Shield.png)
+![alt text](Walk.png)
 
 
 The Corrected Sprite Sheet. ->
