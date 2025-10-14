@@ -17,19 +17,21 @@ Calf
 
 
 ### Interactions
-I planned on making the characters animated using sprites but they will be mostly stationary in the centre of the screen.
-Whenever the user gives inputs for movements, the background will be moved giving the illusion of the character moving forward through the landscpae. The background is a long extended image that moves with user inputs(left and right arrows).
+I plan on making the characters animated using sprites but they will be mostly stationary in the centre of the screen but playing the movement animation.
+Whenever the user gives inputs for movements, the background will be moved instead of the characters giving the illusion of the character moving forward through the landscape. The background is a long extended image that moves with user inputs(left and right arrows).
+
 ![alt text](images/scenes.png)
 ![alt text](images/bg.png)
 
-The image in front of the created canvas will be seen only scene at a time, so the user can get a feeling of traversing and exploration also anticipation on whats coming next.
-The user will press any key to start, when that happens, the calf runs away to the end of the background.It'll stay at a tree at the end of scene, and im planning the samurai to perform an action when she reaches near her pet, which then makes the calf follow her back to the hut. The calf will be controlled with the same inputs for the samurai during this stage.
+The idea is to create an experience for the user to get a feeling of traversing and exploration also anticipation on whats coming next.
 
-When the experience starts, the scene will get darker with time, so like day turning to night. The user has to bring back the calf before its totally night. If its totally night, the user cannot see anything because screen will turn black and in the story, they're considered as lost while exploring.
+The user will press any key to start, when that happens, the calf runs away to the other end of the background. It'll stay at a particular tree at the near the other end of the background image, and im planning the samurai has to perform an action when she reaches near her pet, which then makes the calf follow her back to the hut. The calf will be controlled with the same inputs for the samurai during this stage. So it'll feel like the calf is following the samurai.
+
+When the experience starts, the scene will get darker gradually with time, so like day turning to night. The user has to bring calf back home before its totally night. If its totally night, the user cannot see anything because screen will turn pitch black and in the story, they're considered as getting lost while coming back at night.
 
 Click the link below to see the work in progress, only background and Samurai character is done. 
 
-*important!* Please zoom out the browser window(67% works, please tweak it till the scale of everthing looks better) because there's some problem with the scale of the backgroung image now, i have to fix it.
+*important!* Please zoom out the browser window(67% works, please tweak it till the scale of everthing looks bcorrect) because there's some problem with the scale of the backgroung image now, i have to fix it.
 
 https://aashishishish.github.io/NID_P5JS_AashishAnand/Week%201%20Weekend%20Assignment/Final/
 
@@ -37,7 +39,7 @@ https://aashishishish.github.io/NID_P5JS_AashishAnand/Week%201%20Weekend%20Assig
 
 Moving the background instead of the character.
 
-Trying both the sprites to work together with and without inputs.
+Trying to get both the sprites to work together with and without inputs.
 
 Turning to night.
 
