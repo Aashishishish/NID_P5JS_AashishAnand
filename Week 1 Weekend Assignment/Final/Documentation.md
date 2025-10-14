@@ -22,10 +22,16 @@ Whenever the user gives inputs for movements, the background will be moved givin
 ![alt text](images/scenes.png)
 ![alt text](images/bg.png)
 
-The image in front of the created canvas will be only scene at a time, so the user can get a feeling of traversing and exploration also anticipation on whats coming next.
-The user will press any key to start, when that happens, the calf runs away to the end of the background.It'll stay at a tree at the end of scene, and im planning the samurai to perform an action which then makes the calf follow us back to the hut. The calf will be controlled with the same inputs for the samurai during this stage.
+The image in front of the created canvas will be seen only scene at a time, so the user can get a feeling of traversing and exploration also anticipation on whats coming next.
+The user will press any key to start, when that happens, the calf runs away to the end of the background.It'll stay at a tree at the end of scene, and im planning the samurai to perform an action when she reaches near her pet, which then makes the calf follow her back to the hut. The calf will be controlled with the same inputs for the samurai during this stage.
 
-When the experience starts, the scene will get darker with time, so like its turning to night. The user has to bring back the calf before its totally night. If its totally night, the user can see anything and in the story, they're considered as lost while exploring.
+When the experience starts, the scene will get darker with time, so like day turning to night. The user has to bring back the calf before its totally night. If its totally night, the user cannot see anything because screen will turn black and in the story, they're considered as lost while exploring.
+
+Click the link below to see the work in progress, only background and Samurai character is done. 
+
+*important!* Please zoom out the browser window(67% works, please tweak it till the scale of everthing looks better) because there's some problem with the scale of the backgroung image now, i have to fix it.
+
+https://aashishishish.github.io/NID_P5JS_AashishAnand/Week%201%20Weekend%20Assignment/Final/
 
 ### Challenges faced while coding
 
@@ -35,4 +41,9 @@ Trying both the sprites to work together with and without inputs.
 
 Turning to night.
 
+## Learnings
+
+Working with just Functions is getting tedious and confusing because of the large number of variables.
+
+More efficient way would be using different classes and objects for the elements such as samurai sprite, calf sprite and background image.
 

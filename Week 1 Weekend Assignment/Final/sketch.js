@@ -95,7 +95,9 @@ function draw() {
   if (keyIsPressed) {
     xPos += xSpeed;
   }
-
+//  if(xPos<width){
+//   xSpeed=0;
+//  }
   //Calling the Samurai Sprite
 
   image(sprites[row][count], 1000, 900);
