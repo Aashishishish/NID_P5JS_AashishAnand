@@ -12,7 +12,7 @@ My idea was to create a grid of circles whose stroke keeps varying, opacity keep
 Inspiration i had for reference.
 ![alt text](image.png)
 
-Final Output.
+Click the Link Below to view the Assignment->
 
 https://aashishishish.github.io/NID_P5JS_AashishAnand/DAY%203/Assignment/Assignment%20V1/
 
