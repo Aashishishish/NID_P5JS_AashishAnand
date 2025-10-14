@@ -4,7 +4,12 @@
 
 The Objective of this assignment is to create a 1D sprite animation and a 2D sprite animation with the help of Arrays and for() loops and User inputs.
 
+
+
 ### 1D Sprite Animation
+
+
+
 
 The Original Sprite sheet is of a Samurai, sourced from [craftpix.net](https://craftpix.net/freebies/free-shinobi-sprites-pixel-art/).
 
@@ -27,6 +32,9 @@ The Corrected Sprite Sheet. ->
 ![alt text](SpriteAnimation_1D/images/Samurai_SpriteSheet_2.png)
 
 
+
+
+
 To make this 1D Sprite animation i just limited the for() loop to read only a single row and play the animation with mouse clicks (mousePressed).
 
 *Click the link below to see the 1D Sprite Animation.->*
@@ -34,7 +42,16 @@ To make this 1D Sprite animation i just limited the for() loop to read only a si
 https://aashishishish.github.io/NID_P5JS_AashishAnand/DAY%205/Assignment/SpriteAnimation_1D/
 
 
+
+
+
+
 ### 2D Sprite Animation
+
+
+
+
+
 
 Like before Original Sprite sheet is of a Samurai, sourced from [craftpix.net](https://craftpix.net/freebies/free-shinobi-sprites-pixel-art/).
 
