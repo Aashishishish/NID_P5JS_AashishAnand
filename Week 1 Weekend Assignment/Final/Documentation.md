@@ -1,6 +1,6 @@
 # Week 1 Weekend Assignment
 
-## Samurai and her pet
+## Lone Samurai and her pet
 
 ### Narrative
 
@@ -22,8 +22,8 @@ Whenever the user gives inputs for movements, the background will be moved givin
 ![alt text](images/scenes.png)
 ![alt text](images/bg.png)
 
-The image in front of the created canvas will be only scene at a time, so the user can get a feeling of exploration and anticipation on whats coming next.
-The user will press any key to start, when that happens, the calf runs away to the end of the background.
+The image in front of the created canvas will be only scene at a time, so the user can get a feeling of traversing and exploration also anticipation on whats coming next.
+The user will press any key to start, when that happens, the calf runs away to the end of the background.It'll stay at a tree at the end of scene, and im planning the samurai to perform an action which then makes the calf follow us back to the hut. The calf will be controlled with the same inputs for the samurai during this stage.
 
 When the experience starts, the scene will get darker with time, so like its turning to night. The user has to bring back the calf before its totally night. If its totally night, the user can see anything and in the story, they're considered as lost while exploring.
 
