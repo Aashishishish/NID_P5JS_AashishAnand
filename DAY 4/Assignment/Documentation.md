@@ -13,6 +13,10 @@ My idea was to create a jungle vine pattern. So my individual images are parts o
 
 The problem with the images i created was it was not seamless, meaning the edges are not continuos so the illusion of seamless pattern is broken.
 
+Click the Link Below to view the Assignment->
+
+https://aashishishish.github.io/NID_P5JS_AashishAnand/DAY%204/Assignment/10Print_ImagesWithArray/
+
 ## Learnings and Improvements
 
 Making the starting images to be continuous & seamless will be key to this assignment.
