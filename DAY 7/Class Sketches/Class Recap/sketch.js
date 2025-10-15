@@ -67,8 +67,31 @@
 // }
 
 
+////////colour fix when mouse hovered
 
 
+// let flowers = [];
+// function setup() {
+//   createCanvas(innerWidth, innerHeight);
+
+
+// }
+
+// function draw() {
+//   background(220);
+//   for (let i = 0; i < flowers.length; i++) {
+//     flowers[i].checkMousePosition(mouseX, mouseY);
+//     flowers[i].moveFlower();
+//     flowers[i].drawFlower();
+//   }
+// }
+
+// function mousePressed() {
+//   let tempFlower = new Flower(random(width), random(height), random(-5, 5), random(-5, 5));
+//   flowers.push(tempFlower);
+// }
+
+//collision between flowers
 
 let flowers = [];
 function setup() {
@@ -81,6 +104,16 @@ function draw() {
   background(220);
   for (let i = 0; i < flowers.length; i++) {
     flowers[i].checkMousePosition(mouseX, mouseY);
+
+      //check collision with ALL other flowers
+    for(let j = 0;j<flowers.length;j++) {
+      if(i!=j) {
+        flowers[i].checkCollision(flowers[j]);
+      }
+      
+    }
+    
+
     flowers[i].moveFlower();
     flowers[i].drawFlower();
   }
