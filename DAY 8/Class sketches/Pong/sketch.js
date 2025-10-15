@@ -3,6 +3,11 @@ let lPaddle;
 let rPaddle;
 let player1=0;
 let player2=0;
+let sounds=[];
+
+function preload(){
+
+}
 
 function setup() {
   createCanvas(800, 400);
