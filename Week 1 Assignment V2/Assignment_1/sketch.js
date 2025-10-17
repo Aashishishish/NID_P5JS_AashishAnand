@@ -206,7 +206,7 @@ function handleCalfControlled() {
     samurai.draw();
     calf.update();
     calf.draw(); 
-    drawStatusText("Calf under control! Use arrows to guide it home | Use arrows to move | Ctrl + Arrow keys for sprint | Special Key - G");
+    drawStatusText("Calf under control! Use arrows to guide it home, Use arrows to move & Ctrl + Arrow keys for sprint, Special Key - G");
 }
 
 function handleSamuraiAttackError() { // NEW HANDLER FUNCTION
@@ -236,7 +236,7 @@ function handleGameOverHome() { // NEW HANDLER FUNCTION
     fill(0, 255, 0); // Green for win/success
     text("Phew! We've reached home,", width / 2, height / 2 - 40);
     textSize(36);
-    text("please don't do that again please dear pet.", width / 2, height / 2 + 10);
+    text("please don't do that again dear pet.", width / 2, height / 2 + 10);
     textSize(24);
     fill(255);
     text(".", width / 2, height / 2 + 100);
