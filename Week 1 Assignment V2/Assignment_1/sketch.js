@@ -206,7 +206,7 @@ function handleCalfControlled() {
     samurai.draw();
     calf.update();
     calf.draw(); 
-    drawStatusText("Calf under control! Use arrows to guide it home.");
+    drawStatusText("Calf under control! Use arrows to guide it home | Use arrows to move | Ctrl + Arrow keys for sprint | Special Key - G");
 }
 
 function handleSamuraiAttackError() { // NEW HANDLER FUNCTION
@@ -311,7 +311,7 @@ function keyPressed() {
         
         // --- Final Input Application ---
         
-        // 1. Set Samurai's animation (ALWAYS executes, maintaining previous requirements)
+   
         samurai.setRow(newRow); 
         
         // 2. Set Calf's animation (ONLY if controlled, with remapping)
