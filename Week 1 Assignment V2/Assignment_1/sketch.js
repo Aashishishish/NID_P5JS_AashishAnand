@@ -183,7 +183,7 @@ function handleSamuraiChasing() {
         drawStatusText("You found him! Press DOWN ARROW to pacify him.");
     } else {
         calf.draw(); 
-        drawStatusText("I gotta bring him back home." );
+        drawStatusText("I gotta bring him back home,  Use arrows to move & Ctrl + Arrow keys for sprint, Special Key - G" );
     }
 }
 
