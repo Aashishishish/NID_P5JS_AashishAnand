@@ -40,7 +40,7 @@ function preload() {
     bg = loadImage("assets/bg.png");
     scenes = loadImage("assets/scenes.png");
     spriteImage = loadImage("assets/Samurai_SpriteSheet_4.png");
-    calfImage = loadImage("assets/calf8.png");
+    calfImage = loadImage("assets/calf10.png");
     soundFormats('ogg', 'mp3');
     bgmusic = loadSound("assets/always with me flute - spirited away.mp3");
 }
