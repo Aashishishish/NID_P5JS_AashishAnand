@@ -56,8 +56,8 @@ function setup() {
     BG_ORIGINAL_HEIGHT = 1080; 
     WORLD_WIDTH = 11520; 
     SAMURAI_SCREEN_X = 700;
-    SAMURAI_SCREEN_Y = 560; 
-    CALF_SCREEN_Y = 630; 
+    SAMURAI_SCREEN_Y = height*0.7; 
+    CALF_SCREEN_Y = height*0.79; 
     CALF_NEARBY_DISTANCE = 150; //calf control activation distance.
     CALF_DESTINATION_XPOS = 10350; //calf resting postition after running.
     gameState = 'INTRO'; 
