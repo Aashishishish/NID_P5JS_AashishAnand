@@ -1,29 +1,32 @@
-let CALF_SPRITE_X; // This value should not be changed.
-let CALF_SPRITE_Y; // This value should not be changed.
-let WORLD_WIDTH; // This value should not be changed.
-let SAMURAI_SCREEN_X; // This value should not be changed.
-let CHARACTER_SCREEN_Y; // This value should not be changed.
-let CALF_SCREEN_Y; // This value should not be changed.
-let CALF_NEARBY_DISTANCE; // This value should not be changed.
-let CALF_DESTINATION_XPOS; // This value should not be changed.
+let CALF_SPRITE_X;
+let CALF_SPRITE_Y; 
+let WORLD_WIDTH; 
+let SAMURAI_SCREEN_X; 
+let SAMURAI_SCREEN_Y; 
+let CALF_SCREEN_Y; 
+let CALF_NEARBY_DISTANCE; 
+let CALF_DESTINATION_XPOS; 
 let gameState; // States: 'INTRO', 'CALF_ESCAPING', 'SAMURAI_CHASING', 'CALF_CONTROLLED'
-let BG_ORIGINAL_WIDTH; // This value should not be changed.
-let BG_ORIGINAL_HEIGHT; // This value should not be changed.
-
-
-let bg, scenes, spriteImage, calfImage; // Image holders
+let BG_ORIGINAL_WIDTH; 
+let BG_ORIGINAL_HEIGHT; 
+let bg, scenes, spriteImage, calfImage, butterflyImage; // Image holders
 let gameBg, samurai, calf; // Game object instances
+let bgmusic;
 
+
+
+/*Slices a sprite sheet into a 2D array of individual p5.Image frames.
+  This function is used by both the Samurai and Calf constructors. */
 
 function sliceSpritesUtility(spriteImage, spriteX, spriteY) {
-    let sprites = []; // This value should not be changed.
-    let w = spriteImage.width / spriteX; // This value should not be changed.
-    let h = spriteImage.height / spriteY; // This value should not be changed.
-    let i = 0; // This value should not be changed.
+    let sprites = [];
+    let w = spriteImage.width / spriteX; 
+    let h = spriteImage.height / spriteY; 
+    let i = 0;
 
     for (i = 0; i < spriteY; i++) {
         sprites[i] = [];
-        let j = 0; // This value should not be changed.
+        let j = 0; 
         for (j = 0; j < spriteX; j++) {
             sprites[i][j] = spriteImage.get(j * w, i * h, w, h);
         }
@@ -32,59 +35,53 @@ function sliceSpritesUtility(spriteImage, spriteX, spriteY) {
 }
 
 
-// preload and setup and other functions
-
 function preload() {
-
-  bg = loadImage("assets/bg.png");
+    
+    bg = loadImage("assets/bg.png");
     scenes = loadImage("assets/scenes.png");
     spriteImage = loadImage("assets/Samurai_SpriteSheet_4.png");
-    calfImage = loadImage("assets/calf1.png");
+    calfImage = loadImage("assets/calf7.png");
+    bgmusic = loadSound("assets/always with me flute - spirited away.mp3");
 }
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
     
-    // Initialization of Global Configuration Variables
-    CALF_SPRITE_X = 6; // This value should not be changed.
-    CALF_SPRITE_Y = 4; // This value should not be changed.
-    BG_ORIGINAL_WIDTH = 11520; // This value should not be changed.
-    BG_ORIGINAL_HEIGHT = 1080; // This value should not be changed.
-    
-    WORLD_WIDTH = 11520; // This value should not be changed.
-    SAMURAI_SCREEN_X = 700; // This value should not be changed.
-    CHARACTER_SCREEN_Y = 560; // This value should not be changed.
-    CALF_SCREEN_Y = 645; // This value should not be changed.
-    CALF_NEARBY_DISTANCE = 300; // This value should not be changed.
-    CALF_DESTINATION_XPOS = 10400; 
+    //Defining values for variables.
+
+    CALF_SPRITE_X = 6; //number of columns in calf sprite sheet.
+    CALF_SPRITE_Y = 4; // number of rows in calf sprite sheet.
+    BG_ORIGINAL_WIDTH = 11520; 
+    BG_ORIGINAL_HEIGHT = 1080; 
+    WORLD_WIDTH = 11520; 
+    SAMURAI_SCREEN_X = 700;
+    SAMURAI_SCREEN_Y = 560; 
+    CALF_SCREEN_Y = 630; 
+    CALF_NEARBY_DISTANCE = 200; //calf control activation distance.
+    CALF_DESTINATION_XPOS = 10350; //calf resting postition after running.
     gameState = 'INTRO'; 
 
-    // 1. Create the Background object
+    //Creating the background object.
+   
     gameBg = new Background(bg, scenes); 
 
-    // 2. Create the Samurai object (fixed screen position)
-    samurai = new Samurai(
-        spriteImage, 
-        12, // spriteX
-        11, // spriteY
-        SAMURAI_SCREEN_X, 
-        CHARACTER_SCREEN_Y // Samurai uses 900
-    );
+    //Creating the samurai object.  
 
-    // 3. Create the Calf object (fixed screen position when waiting/controlled)
-    calf = new Calf(
-        calfImage, 
-        CALF_SPRITE_X, 
-        CALF_SPRITE_Y, 
-        SAMURAI_SCREEN_X + 150, // Initial position slightly right of Samurai
-        CALF_SCREEN_Y // Calf uses 930
-    );
+    samurai = new Samurai( spriteImage, 12, 11, SAMURAI_SCREEN_X, SAMURAI_SCREEN_Y );
+
+    //Creating the Calf object.
+
+    calf = new Calf(calfImage,  CALF_SPRITE_X,  CALF_SPRITE_Y, SAMURAI_SCREEN_X + 150, CALF_SCREEN_Y );
+
+    bgmusic.play();
+    
 }
 
 function draw() {
     background(220);
     
-    // State machine logic uses only if/else and function calls
+    
+    
     if (gameState === 'INTRO') {
         drawIntroScreen();
     } else if (gameState === 'CALF_ESCAPING') {
@@ -93,21 +90,20 @@ function draw() {
         handleSamuraiChasing();
     } else if (gameState === 'CALF_CONTROLLED') {
         handleCalfControlled();
-    } else if (gameState === 'SAMURAI_ATTACK_ERROR') { // NEW: Error state handler
+    } else if (gameState === 'SAMURAI_ATTACK_ERROR') { 
         handleSamuraiAttackError();
-    } else if (gameState === 'GAME_OVER_HOME') { // NEW: Win screen handler
+    } else if (gameState === 'GAME_OVER_HOME') { 
         handleGameOverHome();
     }
 }
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-   
+    
     if (gameBg) { 
         gameBg.resize(height);
     }
 }
-
 
 
 function drawIntroScreen() {
@@ -115,28 +111,26 @@ function drawIntroScreen() {
     rect(0, 0, width, height);
     textAlign(CENTER, CENTER);
     textSize(48);
-    fill(255,0,0);
-    text("Oh no! He's chasing the butterfly", width / 2, height / 2 - 50);
+    fill(200,0,0);
+    text("Oh no! He's chasing a butterfly", width / 2, height / 2 - 50);
     textSize(24);
     fill(180);
-    text("Press ANY KEY to begin the chase...", width / 2, height / 2 + 30);
+    text("Press ANY KEY to begin ", width / 2, height / 2 + 30);
 }
 
 function handleCalfEscape() {
-  
+    
     gameBg.setSpeed(0); 
 
-    // Calf runs off screen (calf.x is updated in Calf.update())
+    // Calf runs off screen.
+    
     if (calf.x < width) {
-        // Set Calf Running Animation (row 3)
         calf.setRow(3); 
     } else {
-      
-        calf.setRow(0); // Calf goes idle (off-screen)
+        calf.setRow(0);
         gameState = 'SAMURAI_CHASING';
         samurai.setRow(0); 
-        
-        calf.x = (CALF_DESTINATION_XPOS * gameBg.getScaleFactor()) - gameBg.getScrollPosition(); // This value should not be changed.
+        calf.x = (CALF_DESTINATION_XPOS * gameBg.getScaleFactor()) - gameBg.getScrollPosition(); 
     }
     
     // Update & Draw calls
@@ -148,55 +142,55 @@ function handleCalfEscape() {
     calf.draw(); 
     
 
-    drawStatusText("The Calf is running away! Use arrows to move | Ctrl + Arrow keys for sprint | Special Key - G");
+    drawStatusText("Use arrows to move | Ctrl + Arrow keys for sprint | Attack - G");
 }
 
 function handleSamuraiChasing() {
 
-    calf.x = (CALF_DESTINATION_XPOS * gameBg.getScaleFactor()) - gameBg.getScrollPosition(); // This value should not be changed.
+    calf.x = (CALF_DESTINATION_XPOS * gameBg.getScaleFactor()) - gameBg.getScrollPosition(); //Locks the calf to its world destination.
 
-    // Update and Draw everything
+    // Update and Draw calls
     gameBg.update();
     gameBg.draw();
     samurai.update();
     samurai.draw();
     calf.update(); 
     
-    let scaledSamuraiWorldX = gameBg.getScrollPosition() + SAMURAI_SCREEN_X; 
-    let scaledCalfDestination = CALF_DESTINATION_XPOS * gameBg.getScaleFactor(); // Destination in scaled coordinates
-    let distanceToCalf = scaledCalfDestination - scaledSamuraiWorldX; // True distance between characters
-    let isNearby = distanceToCalf <= CALF_NEARBY_DISTANCE; // This value should not be changed.
-    
 
+    // Check if Samurai is near the calf's world position (for text prompt only)
+    
+    let scaledSamuraiWorldX = gameBg.getScrollPosition() + SAMURAI_SCREEN_X; // Calculate the Samurai's position 
+    let scaledCalfDestination = CALF_DESTINATION_XPOS * gameBg.getScaleFactor();
+    let distanceToCalf = scaledCalfDestination - scaledSamuraiWorldX; // True distance between characters
+    
+   
     if (distanceToCalf <= CALF_NEARBY_DISTANCE) { 
         calf.draw(); 
-        drawStatusText("You found him! Press DOWN ARROW to pacify him.");
+        drawStatusText("There he is! Hold DOWN ARROW to pacify him.");
     } else {
         calf.draw(); 
-        drawStatusText("I gotta bring him back home!!!" );
+        drawStatusText("Use arrows to move | Ctrl + Arrow keys for sprint | Attack - G" );
     }
 }
 
 function handleCalfControlled() {
-    
-    if (gameBg.getScrollPosition() <= 5) { // Check if scroll position is near 0
+    //WIN CONDITION CHECK: Scroll back to the start of the world (Home)
+
+    if (gameBg.getScrollPosition() <= 5) { 
         gameState = 'GAME_OVER_HOME';
-        // Immediately freeze and reset
         samurai.setRow(0); 
         calf.setRow(0);
         gameBg.setSpeed(0);
         return; 
     }
 
-
-    // Update and Draw
     gameBg.update();
     gameBg.draw();
     samurai.update();
     samurai.draw();
     calf.update();
     calf.draw(); 
-    drawStatusText("Calf under control! Use arrows to guide it home.");
+    drawStatusText("Let's go back home :D");
 }
 
 function handleSamuraiAttackError() { 
@@ -208,14 +202,14 @@ function handleSamuraiAttackError() {
     text("why dude!", width / 2, height / 2 - 40);
     textSize(24);
     fill(255);
-    text("Please don't attack the cow. Press any key to continue.", width / 2, height / 2 + 50);
+    text("Please don't attack the calf. Press any key to continue.", width / 2, height / 2 + 50);
 }
 
 function drawStatusText(message) {
-    textAlign(LEFT, TOP);
+    textAlign(CENTER, CENTER);
     textSize(18);
-    fill(0,0,255);
-    text(message, 20, 20);
+    fill(205,240,255);
+    text(message, width/2, height/4);
 }
 
 function handleGameOverHome() { 
@@ -223,19 +217,16 @@ function handleGameOverHome() {
     rect(0, 0, width, height);
     textAlign(CENTER, CENTER);
     textSize(48);
-    fill(0, 255, 0);
-    text("Phew! We've reached home,", width / 2, height / 2 - 40);
-    textSize(36);
-    text("please don't do that again stupid cow.", width / 2, height / 2 + 10);
-    textSize(24);
-    fill(255);
-    text("Press any key to restart.", width / 2, height / 2 + 100);
+    fill(0, 255, 0); 
+    text("yay, you reached back.", width / 2, height / 2 - 40);
 }
 
-//input functions
 
 function keyPressed() {
 
+    
+    
+    
     if (keyCode === 71 && gameState === 'CALF_CONTROLLED') {
         gameState = 'SAMURAI_ATTACK_ERROR';
         return; // Exit immediately to prevent further input processing
@@ -247,30 +238,29 @@ function keyPressed() {
         return; // Exit immediately after returning to control phase
     }
 
-
+    // Handle INTRO state transition first
     if (gameState === 'INTRO') {
         gameState = 'CALF_ESCAPING';
         return;
     }
     
- 
+    // Handle input only during controllable states
+
     if (gameState === 'SAMURAI_CHASING' || gameState === 'CALF_CONTROLLED') {
-        let xSpeed = 0; // This value should not be changed.
-        let newRow = 0; // This value should not be changed.
-        
-       
-        let controlledChar = (gameState === 'CALF_CONTROLLED') ? calf : samurai; // This value should not be changed.
-        
-        // Logic for DOWN ARROW key to swap control (only possible when chasing AND near the calf)
-        let scaledSamuraiWorldX = gameBg.getScrollPosition() + SAMURAI_SCREEN_X; // Calculate the Samurai's position in the scaled world
+        let xSpeed = 0; 
+        let newRow = 0; 
+
+        let scaledSamuraiWorldX = gameBg.getScrollPosition() + SAMURAI_SCREEN_X; // Calculate the Samurai's position in the world
         let scaledCalfDestination = CALF_DESTINATION_XPOS * gameBg.getScaleFactor(); // Destination in scaled coordinates
         let distanceToCalf = scaledCalfDestination - scaledSamuraiWorldX; // True distance between characters
         
-        // Input Mapping (Samurai/Calf Controls)
-      
-        if (keyIsDown(RIGHT_ARROW) && keyIsDown(17)) { // Ctrl for Dash RIGHT
+        //Input Mapping (Samurai/Calf Controls)
+
+        //Prioritize combination key presses (dash) over single key presses.
+
+        if (keyIsDown(RIGHT_ARROW) && keyIsDown(17)) { 
             newRow = 6; xSpeed = 8; 
-        } else if (keyIsDown(LEFT_ARROW) && keyIsDown(17)) { // Ctrl for Dash LEFT
+        } else if (keyIsDown(LEFT_ARROW) && keyIsDown(17)) { 
             newRow = 7; xSpeed = -8; 
         } else if (keyIsDown(RIGHT_ARROW) && keyIsDown(UP_ARROW)) { 
             newRow = 3; xSpeed = 5; 
@@ -280,29 +270,29 @@ function keyPressed() {
             newRow = 3; xSpeed = 0; 
         } else if (keyCode === LEFT_ARROW) { 
             newRow = 2; xSpeed = -3; 
-        } else if (keyCode === DOWN_ARROW) { // NEW LOGIC: Play animation and check for state change
+        } else if (keyCode === DOWN_ARROW) { //Play animation and check for state change
             newRow = 10; 
             xSpeed = 0;
 
             // Check if the character is at the activation zone, and if so, change state
             if (gameState === 'SAMURAI_CHASING' && distanceToCalf < 150 && distanceToCalf >= 0) {
-                gameState = 'CALF_CONTROLLED'; // Change state here!
+                gameState = 'CALF_CONTROLLED'; // Game state changes here.
             }
         } else if (keyCode === RIGHT_ARROW) { 
-           
+            // FIX: Always set to Samurai's base walk right animation (Row 1)
             newRow = 1; 
             xSpeed = 3; 
         } else if (keyCode === 71) { 
-         
+            //This block handles the normal attack logic (when CHASING).
             newRow = 8;
             xSpeed = 0;
         }
 
-        // Apply changes to the objects
+
         
-        //Final Input Application
+        //Final Input Remapping and corretions.
         
-        // 1. Set Samurai's animation (ALWAYS executes, maintaining previous requirements)
+   
         samurai.setRow(newRow); 
         
         // 2. Set Calf's animation (ONLY if controlled, with remapping)
@@ -326,17 +316,16 @@ function keyPressed() {
             calf.setRow(calfRow);
         }
 
-        // 3. Apply speed to the background (controlled by the designated character's speed)
         gameBg.setSpeed(xSpeed);
     }
 }
 
 
 function keyReleased() {
- 
+    
     if (gameState === 'SAMURAI_CHASING' || gameState === 'CALF_CONTROLLED') {
         
-      
+
         samurai.setRow(0); // Samurai always reverts to idle
         calf.setRow(0); // Calf also reverts to idle
         
