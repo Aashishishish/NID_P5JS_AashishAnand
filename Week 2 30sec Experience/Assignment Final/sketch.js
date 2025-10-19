@@ -41,6 +41,7 @@ function preload() {
     scenes = loadImage("assets/scenes.png");
     spriteImage = loadImage("assets/Samurai_SpriteSheet_4.png");
     calfImage = loadImage("assets/calf7.png");
+    soundFormats('ogg', 'mp3');
     bgmusic = loadSound("assets/always with me flute - spirited away.mp3");
 }
 
@@ -72,10 +73,10 @@ function setup() {
     //Creating the Calf object.
 
     calf = new Calf(calfImage,  CALF_SPRITE_X,  CALF_SPRITE_Y, SAMURAI_SCREEN_X + 150, CALF_SCREEN_Y );
-
-    bgmusic.play();
     
 }
+
+
 
 function draw() {
     background(220);
@@ -113,12 +114,17 @@ function drawIntroScreen() {
     textSize(48);
     fill(220);
     text("Oh no! He's chasing a butterfly", width / 2, height / 2 - 50);
-    textSize(32);
+    textSize(37);
     fill(200,0,0);
-    text("He might get lost", width / 2, height / 2 );
+    text("He might get lost!", width / 2, height / 2 );
+
     textSize(24);
+    fill(0,0,255);
+    text("Press 'M' for music (recommended).", width / 2, height / 2 + 200 );
+
+    textSize(22);
     fill(180);
-    text("Press ANY KEY to begin ", width / 2, height / 2 + 50);
+    text("Press ANY KEY to begin ", width / 2, height / 2 + 250);
 }
 
 function handleCalfEscape() {
@@ -227,7 +233,9 @@ function handleGameOverHome() {
 
 function keyPressed() {
 
-    
+    if (keyCode ===77){
+        bgmusic.play(); //toggle bg music.
+    }
     
     
     if (keyCode === 71 && gameState === 'CALF_CONTROLLED') {
