@@ -6,17 +6,17 @@ let SAMURAI_SCREEN_Y;
 let CALF_SCREEN_Y; 
 let CALF_NEARBY_DISTANCE; 
 let CALF_DESTINATION_XPOS; 
-let gameState; // States: 'INTRO', 'CALF_ESCAPING', 'SAMURAI_CHASING', 'CALF_CONTROLLED'
+let gameState; 
 let BG_ORIGINAL_WIDTH; 
 let BG_ORIGINAL_HEIGHT; 
-let bg, scenes, spriteImage, calfImage, butterflyImage; // Image holders
-let gameBg, samurai, calf; // Game object instances
+let bg, scenes, spriteImage, calfImage;
+let gameBg, samurai, calf; 
 let bgmusic;
 
 
 
-/*Slices a sprite sheet into a 2D array of individual p5.Image frames.
-  This function is used by both the Samurai and Calf constructors. */
+
+ /* This function is used by both the Samurai and Calf constructors. */
 
 function sliceSpritesUtility(spriteImage, spriteX, spriteY) {
     let sprites = [];
@@ -57,7 +57,7 @@ function setup() {
     SAMURAI_SCREEN_X = 700;
     SAMURAI_SCREEN_Y = 560; 
     CALF_SCREEN_Y = 630; 
-    CALF_NEARBY_DISTANCE = 200; //calf control activation distance.
+    CALF_NEARBY_DISTANCE = 150; //calf control activation distance.
     CALF_DESTINATION_XPOS = 10350; //calf resting postition after running.
     gameState = 'INTRO'; 
 
@@ -111,11 +111,14 @@ function drawIntroScreen() {
     rect(0, 0, width, height);
     textAlign(CENTER, CENTER);
     textSize(48);
-    fill(200,0,0);
+    fill(220);
     text("Oh no! He's chasing a butterfly", width / 2, height / 2 - 50);
+    textSize(32);
+    fill(200,0,0);
+    text("He might get lost", width / 2, height / 2 );
     textSize(24);
     fill(180);
-    text("Press ANY KEY to begin ", width / 2, height / 2 + 30);
+    text("Press ANY KEY to begin ", width / 2, height / 2 + 50);
 }
 
 function handleCalfEscape() {
@@ -166,7 +169,7 @@ function handleSamuraiChasing() {
    
     if (distanceToCalf <= CALF_NEARBY_DISTANCE) { 
         calf.draw(); 
-        drawStatusText("There he is! Hold DOWN ARROW to pacify him.");
+        drawStatusText("There he is & the butterfly! i guess they're friends now. | Hold DOWN ARROW to pacify him.");
     } else {
         calf.draw(); 
         drawStatusText("Use arrows to move | Ctrl + Arrow keys for sprint | Attack - G" );

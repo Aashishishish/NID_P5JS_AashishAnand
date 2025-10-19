@@ -6,7 +6,7 @@ class Calf {
         this.y = y;
         this.row = 0;
         this.count = 0;
-        this.runSpeed = 5;
+        this.runSpeed = 4;
     }
 
     
