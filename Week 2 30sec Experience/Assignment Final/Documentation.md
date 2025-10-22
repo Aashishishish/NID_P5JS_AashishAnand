@@ -4,11 +4,11 @@
 
 ## Concept and Story
 
-*Concept & Aim*
+### *Concept & Aim*
 
 I moved on from a tense, time-pressured rescue concept for the week 1 assignment to a wholesome, Studio Ghibli-esque experience. Every scene is designed to evoke a feeling of instant joy, adventure and a little bit of worry; using beautiful backgrounds and visuals to create a completely wholesome and adorable experience. I further wanted to amplify this feeling by adding a delicate, heartfelt accompanying score to perfectly complete the atmosphere.
 
-*The story*
+### *The story*
 
 The young samurai named Tsumu lived happily in her small hut, sharing her space with Kiko, a small spirited calf.
 
