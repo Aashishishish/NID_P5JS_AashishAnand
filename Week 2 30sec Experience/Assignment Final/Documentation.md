@@ -28,11 +28,11 @@ Kiko approached the happy pair and bent down onto her knees, petting Tsumu's lar
 
 Young Samurai-Tsumu
 
-![alt text](images/Samurai_SpriteSheet_4.png)
+![alt text](assets/Samurai_SpriteSheet_4.png)
 
 Calf-Kiko 
 
-![alt text](assets/calf10.png)
+![alt text](assets/calf1.png)
 
 Butterfly
 
@@ -44,10 +44,13 @@ I realised that making a single sprite sheet with both the calf and butterfly in
 
 Links to source -->
 
-The sprite sheets are sourced from -
+The sprite sheets are sourced freely from -
 
  Samurai -[craftpix.net](https://craftpix.net/freebies/free-shinobi-sprites-pixel-art/).
+
  Calf - https://craftpix.net/freebies/free-top-down-animals-farm-pixel-art-sprites/?num=2&count=251&sq=animals%20top%20down&pos=7
+
+
  Butterfly - https://opengameart.org/content/butterfly
 
 
@@ -107,22 +110,32 @@ Control Swap: The Calf instantly becomes the character whose movement controls t
 The Samurai continues to act out the appropriate walking or running motions.
 The Calf's animation is automatically translated to match the Samurai's direction (e.g., Samurai walks left, Calf runs left).
 
+### Attack Error sequence
+
+if the player tries to attack the calf while in calf controlled phase, a error message is is prompted at the user saying to don't attack the calf. I included this as to show the player does not have that agency, to attack the calf.
+
+### Game over 
+
+Once the characters reach back to their starting postion ie a winning condition, a text is prompted to give that feedback of winning.
+
 
 #### *Click the link below to experience the assignment. ->*
 
 #### https://aashishishish.github.io/NID_P5JS_AashishAnand/Week%202%2030sec%20Experience/Assignment%20Final/
 
+
 ### Challenges faced while coding
 
-Moving the background instead of the character.
+Gaining control of calf sequence was tricky. I couldn't figure out how to tranfer control or rather control both the characters after a trigger. The activation zone was also tricky.
+I made a prototype of this interaction with the help of Anshul and gemini(ai) to implement in this final assignment.
 
-Trying to get both the sprites to work together with and without inputs.
+The link to the interaction protoytype is given below->
 
-Turning to night.
+https://aashishishish.github.io/NID_P5JS_AashishAnand/Week%202%2030sec%20Experience/Gametest_Prototype%20with%20AI/
 
-## Learnings
 
-Working with just Functions is getting tedious and confusing because of the large number of variables.
+## Feedbacks & improvements
 
-More efficient way would be using different classes and objects for the elements such as samurai sprite, calf sprite and background image.
+Working with just Functions for the week 1 weekend assignment was tedious. This time i switched to using classes and objects, which made it much easier to handle and made the code cleaner.
 
+Added the butterfly visual in the experience.
