@@ -75,7 +75,6 @@ When a directional input is active, the characters will loop an appropriate move
 
 When no directional input is given, the characters will play an idle animation while remaining centered.
 
-
 For the character animations, i implemented a single ultility function defined globally which slices the sprite sheet into a 2D array of individual images. Its only job is to cut up a single image into a 2D array of frames, regardless of whether that image is for the Samurai or the Calf. This function is called in the samurai and calf classes. It replaces the need to write the complex nested for loop logic inside both the Samurai constructor and the Calf constructor.
 
 ### *Background*
@@ -88,9 +87,7 @@ Right Arrow Input: Scrolls the background image to the left, creating the illusi
 
 Left Arrow Input: Scrolls the background image to the right, creating the illusion that the character is moving backward/left.
 
-### *Calf escape sequence *
-
-The experience begins by the automatic movement of calf along with butterfly
+### *Calf escape sequence*
 
 The Starting Signal: As soon as you press a key to leave the intro screen, the game state changes its mode to "Calf Escaping."
 
