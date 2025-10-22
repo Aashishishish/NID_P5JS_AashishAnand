@@ -55,7 +55,7 @@ function draw() {
   rect(0, 512, innerWidth, 300);
 
   image(sprites[row][count], x, 384);
-  if (frameCount % 5 == 0) {
+  if (frameCount % 4 == 0) {
     count = (count + 1) % spriteX;
     x = x + xdir;
     y = y + ydir;
