@@ -139,3 +139,5 @@ https://aashishishish.github.io/NID_P5JS_AashishAnand/Week%202%2030sec%20Experie
 Working with just Functions for the week 1 weekend assignment was tedious. This time i switched to using classes and objects, which made it much easier to handle and made the code cleaner.
 
 Added the butterfly visual in the experience.
+
+Made the calf a little bit bigger visually.
