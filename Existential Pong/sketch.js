@@ -716,7 +716,7 @@ class Game {
                 "You realized this existence without meaning was absurd.\n" +
                 "Your realized there is no point, no meaning in this existence.\n" +
                 "You chose to remove yourself from the equation.\n" +
-                "You chose regression."
+                "You chose regression.\n" +
                 "You sought self destruction.\n" +
                 "You sought nothingness.\n" +
                 "You became The Void.\n" +
