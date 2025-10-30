@@ -702,10 +702,10 @@ class Game {
                 "This realization rendered the world meaningless.\n" +
                 "Thus, you chose to create your own meaning.\n" +
                 "Your own purpose.\n" +
-                "You chose Progress."
+                "You chose Progress.\n"+
                 "You've transcended.\n" +               
                 "You have become The Übermensch.\n" +
-                "You have become The Overman."
+                "You have become The Overman.\n" +
                 "You've achieved True Freedom." ;
                 
             this.drawFadeEffects(ubermenschText); 
