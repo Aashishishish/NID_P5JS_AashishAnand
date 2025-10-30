@@ -706,7 +706,7 @@ class Game {
                 "You've transcended.\n" +               
                 "You have become The Übermensch.\n" +
                 "You have become The Overman.\n" +
-                "You've achieved True Freedom." ;
+                "You've achieved True Freedom.\n" ;
                 
             this.drawFadeEffects(ubermenschText); 
         } else if (this.state === STATE.END_NOTHINGNESS) {
@@ -720,7 +720,7 @@ class Game {
                 "You sought self destruction.\n" +
                 "You sought nothingness.\n" +
                 "You became The Void.\n" +
-                "You achieved Ultimate Freedom.";
+                "You achieved Ultimate Freedom.\n";
 
             // Fade to black, white text
             this.drawFadeEffects(nothingnessText); 
