@@ -54,7 +54,7 @@ function preload() {
         s2 = loadSound('assets/song_2.mp3');
         s3 = loadSound('assets/song_3.mp3');
         s4 = loadSound('assets/song_4.mp3');
-        s5 = loadSound('assets/song_5.mp3'); // Added song_5
+        s5 = loadSound('assets/song_5.mp3'); 
 
     } catch (e) {
         console.error("Failed to load sound files. Check file paths and P5.js sound library inclusion.", e);
@@ -702,6 +702,7 @@ class Game {
                 "This realization rendered the world meaningless.\n" +
                 "Thus, you chose to create your own meaning.\n" +
                 "Your own purpose.\n" +
+                "You chose Will to Power.\n" +
                 "You chose Progress.\n"+
                 "You've transcended.\n" +               
                 "You have become The Übermensch.\n" +
@@ -717,6 +718,7 @@ class Game {
                 "Your realized there is no point, no meaning in this existence.\n" +
                 "You chose to remove yourself from the equation.\n" +
                 "You chose regression.\n" +
+                "You chose Will to Not Exist.\n" +
                 "You sought self destruction.\n" +
                 "You sought nothingness.\n" +
                 "You became The Void.\n" +
