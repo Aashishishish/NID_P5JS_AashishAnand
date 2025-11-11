@@ -15,7 +15,7 @@ let carImage;
 let bgScrollX = 0; 
 let carX = 50; 
 let carY; 
-let carSpeed = 6;
+let carSpeed = 4;
 
 // --- Act 3 Variables ---
 let act3_location;
