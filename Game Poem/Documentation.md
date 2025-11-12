@@ -6,7 +6,7 @@ This past Diwali was a strange experience for me. I was back home, Me and my fri
 
 ## Game Poem Concept ##
 
-My game poem is about a very specific cultural experience: what Diwali feels like in a region where it isn't celebrated at all.
+My game poem is about a very specific cultural experience, what Diwali feels like in a region where it isn't celebrated at all.
 
 I wanted to capture the strange feeling of a major holiday existing only as a distant, digital echo. 
 
@@ -14,7 +14,7 @@ The story opens with the player alone in a paddy field. The first interaction is
 
 This quiet, personal "firework" is immediately interrupted when the player is reminded of the actual festival not by lights or sounds, but by a buzz on their phone.
 
-From there, I used a few key moments and metaphors to show this collective, regional experience:
+From there, I used a few key moments and metaphors to show this collective, regional experience.
 
 As the player drives through the silent city, all the house windows display chat boxes. Inside these boxes, people are simply wishing each other "Happy Diwali" instead of celebrating. This is a visual statement that for this entire city/state, the massive festival has been reduced to a digital notification, a performance of wishes, rather than a real-world celebration.
 
