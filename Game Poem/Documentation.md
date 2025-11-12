@@ -2,11 +2,13 @@
 
 ## Diwali Vacation Observations ##
 
-This past Diwali was a strange experience for me. I was back home, Me and my friends go out every evening to have chai and talk about life. In one of days, i was reminded of diwali because of all the diwali wishes coming in the college group chat. I sent out my own "Happy Diwali" messages, but it felt so hollow. This melancholic feeling, while everyone back in campus were celebrating diwali, while in my hometown diwali was just another day. No lights,no chiraag, no fireworks, the only "firework" I saw was the one I made myself, the repeated clicks of my lighter trying to spark a flame for my cigarette. Diwali felt so distant. Later, while I drove through my city to go back home, I hoped to see some fireworks and lights, but it was just... quiet. It hit me that in my region, Diwali isn't a real-world celebration; it's just a digital notification. It's just people in chat boxes wishing each other "Happy Diwali" instead of actually celebrating.
+This past Diwali was a strange experience for me. I was back home, Me and my friends go out every evening to have chai and talk about life. In one of days, i was reminded of diwali because of all the diwali wishes coming in the college group chat. I sent out my own "Happy Diwali" messages, but it felt so hollow. This melancholic feeling, while everyone back in campus were celebrating diwali, while in my hometown diwali was just another day. No lights,no chiraag, no fireworks, the only "firework" I saw was the one I made myself, the repeated clicks of my lighter trying to spark a flame for my cigarette. Diwali felt so distant. Later, while I drove through my city to go back home, I hoped to see some fireworks and lights, but it was just... quiet. It hit me that in my region, Diwali isn't a real-world celebration; it's just a digital notification. The ritual I observed were people sending and recieving diwali wishes. It was just people in chat boxes wishing each other "Happy Diwali" instead of actually celebrating.
 
 ## Game Poem Concept ##
 
-My game poem is about a very specific cultural experience, what Diwali feels like in a region where it isn't celebrated at all.
+I wanted to capture this somber experience and implement this in the game poem.
+
+My game poem is about the very specific cultural experience, what Diwali feels like in a region where it isn't celebrated at all.
 
 I wanted to capture the strange feeling of a major holiday existing only as a distant, digital echo. 
 
