@@ -1,76 +1,23 @@
-today is the oldest you will ever been, but also the youngest you will ever be again.
+# Game Poem #
 
-Enjoy your experiences before it goes away. Capture experiences so can you treasure them forever.
+## Diwali Vacation Observations ##
 
-People we care about, are only getting older. Urge them to enjoy these fleeting moments and Capture them doing them because in a few years, they will not be able to. And they can only reminicense about them. These captured moments will last forever with care.
+This past Diwali was a strange experience for me. I was back home, Me and my friends go out every evening to have chai and talk about life. In one of days, i was reminded of diwali because of all the diwali wishes coming in the college group chat. I sent out my own "Happy Diwali" messages, but it felt so hollow. This melancholic feeling, while everyone back in campus were celebrating diwali, while in my hometown diwali was just another day. No lights,no chiraag, no fireworks, the only "firework" I saw was the one I made myself, the repeated clicks of my lighter trying to spark a flame for my cigarette. Diwali felt so distant. Later, while I drove through my city to go back home, I hoped to see some fireworks and lights, but it was just... quiet. It hit me that in my region, Diwali isn't a real-world celebration; it's just a digital notification. It's just people in chat boxes wishing each other "Happy Diwali" instead of actually celebrating.
 
+## Game Poem Concept ##
 
+My game poem is about a very specific cultural experience: what Diwali feels like in a region where it isn't celebrated at all.
 
+I wanted to capture the strange feeling of a major holiday existing only as a distant, digital echo. 
 
+The story opens with the player alone in a paddy field. The first interaction is a close-up where the player must repeatedly click the mouse to light their cigarette. Each click advances a single frame of the flame, from a spark to a full light. This action is a metaphor for a firework; it's the only time in the game the player directly interacts with creating light, a symbolic, solitary stand-in for the missing celebration.
 
+This quiet, personal "firework" is immediately interrupted when the player is reminded of the actual festival not by lights or sounds, but by a buzz on their phone.
 
-Act 1
+From there, I used a few key moments and metaphors to show this collective, regional experience:
 
+As the player drives through the silent city, all the house windows display chat boxes. Inside these boxes, people are simply wishing each other "Happy Diwali" instead of celebrating. This is a visual statement that for this entire city/state, the massive festival has been reduced to a digital notification, a performance of wishes, rather than a real-world celebration.
 
-// --- Global Variables ---
+After stopping by a river, the player partakes in this same digital ritual, sending out "Happy Diwali" wishes to everyone. They then let out a sigh, which captures that feeling of participating in something hollow.
 
-let act1Images = []; // Array to store our 13 loaded images
-let totalImages = 13; // The total number of images for this act
-let currentImageIndex = 0; // Keeps track of which image we are showing
-
-// --- 1. Preload Function ---
-
-function preload() {
-  // Loop to load 13 images from the 'assets' folder
-  for (let i = 1; i <= totalImages; i++) {
-    let filename = 'assets/A1_' + nf(i, 2) + '.png'; 
-    console.log('Loading: ' + filename);
-    act1Images.push(loadImage(filename));
-  }
-}
-
-// --- 2. Setup Function ---
-
-function setup() {
-  // Creates the 1920x1080 canvas
-  createCanvas(1920, 1080);
-  console.log('Setup complete. Loaded ' + act1Images.length + ' images.');
-}
-
-// --- 3. Draw Function ---
-
-function draw() {
-  let currentImage = act1Images[currentImageIndex];
-  
-  // It will only draw if the image exists and is loaded.
-  if (currentImage && currentImage.width > 0) {
-    image(currentImage, 0, 0);
-  }
-}
-
-// --- 4. Mouse Clicked Event ---
-// --- THIS FUNCTION IS UPDATED ---
-
-function mouseClicked() {
-  
-  // Check if the click was on the right half of the screen
-  if (mouseX > width / 2) {
-    // --- Go Forward ---
-    // Check if we are not on the last image
-    if (currentImageIndex < totalImages - 1) {
-      currentImageIndex++;
-    } else {
-      console.log("End of Act 1.");
-    }
-  } 
-  // Check if the click was on the left half of the screen
-  else if (mouseX < width / 2) {
-    // --- Go Backward ---
-    // Check if we are not on the first image
-    if (currentImageIndex > 0) {
-      currentImageIndex--;
-    } else {
-      console.log("Already at the beginning.");
-    }
-  }
-}
+This sigh leads to the climax, the player sees fireworks in the sky, but they're all playing in reverse. This final metaphor symbolizes that the spirit of the holiday doesn't just feel absent for them, it's culturally absent from the whole area. The celebration is literally being undone, or "un-happening," in their world.
